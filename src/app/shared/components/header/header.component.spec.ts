@@ -1,8 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { NameAbreviationPipe } from '../../pipes/name-abreviation/name-abreviation.pipe';
-import { SuportCardComponent } from './components/suport-card/suport-card.component';
-import { UserProfileCardComponent } from './components/user-profile-card/user-profile-card.component';
 import { HeaderComponent } from './header.component';
 
 describe('HeaderComponent', () => {
@@ -11,7 +7,7 @@ describe('HeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HeaderComponent, UserProfileCardComponent, NameAbreviationPipe, SuportCardComponent],
+      declarations: [HeaderComponent],
       imports: [],
     }).compileComponents();
   }));

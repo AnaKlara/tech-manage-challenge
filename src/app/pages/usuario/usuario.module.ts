@@ -8,6 +8,12 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { CoreModule } from 'src/app/core/core.module';
 import { ListarUsuarioComponent } from './components/listar-usuario/listar-usuario.component';
 
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -19,7 +25,13 @@ import { ListarUsuarioComponent } from './components/listar-usuario/listar-usuar
     CommonModule,
     UsuarioRoutingModule,
     SharedModule,
-    CoreModule
+    CoreModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatButtonModule
   ]
 })
 export class UsuarioModule { }

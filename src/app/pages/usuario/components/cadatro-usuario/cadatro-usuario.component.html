@@ -1,12 +1,39 @@
 <breadcrumb [breadcrumbs]="breadcrumbItems"></breadcrumb>
 <section id="cadastro-perfil">
   <div class="header-cadastro">
-    <div>
       <p class="title">Cadastrar perfil</p>
-      
-
-
-    </div>
+      <button mat-flat-button color="primary">Salvar</button>
   </div>
+</section>
+
+<section class="section-form">
+  <form [formGroup]="userRegistrationForm">
+    <mat-form-field class="form-field" appearance="fill">
+      <mat-label>Nome Completo</mat-label>
+      <input matInput formControlName="nomeCompleto" placeholder="Digite seu nome">
+    </mat-form-field>
+
+    <mat-form-field class="form-field" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
+    </mat-form-field>
+
+    <mat-form-field class="form-field" appearance="fill">
+      <mat-label>Celular</mat-label>
+      <input matInput formControlName="celular" maxlength="11" placeholder="Ex. 21 9 68814531">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Data de Nascimento</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="dataNascimento" placeholder="dd/MM/AAAA">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+
+   <app-simple-select formControlName="tipoUsuario" [options]="roles" placeholder="Select a role"></app-simple-select>
+    
+
+  </form>
 </section>
 

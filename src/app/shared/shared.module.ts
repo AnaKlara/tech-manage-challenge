@@ -3,23 +3,23 @@ import { CommonModule } from '@angular/common';
 
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { SelectComponent } from './components/select/select.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { DropdownSidenavComponent } from './components/sidenav/components/dropdown-sidenav/dropdown-sidenav.component';
 import { RouterModule } from '@angular/router';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
+import { SimpleSelectComponent } from './components/form-components/simple-select/simple-select.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
-    SelectComponent,
     BreadcrumbComponent,
     SidenavComponent,
     DropdownSidenavComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    SimpleSelectComponent
   ],
   imports: [
     CommonModule,
@@ -28,10 +28,10 @@ import { NotFoundPageComponent } from './components/not-found-page/not-found-pag
   exports: [
     HeaderComponent,
     FooterComponent,
-    SelectComponent,
     BreadcrumbComponent,
     SidenavComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    SimpleSelectComponent
   ]
 })
 export class SharedModule { }
