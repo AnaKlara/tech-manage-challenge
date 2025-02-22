@@ -1,6 +1,6 @@
 import { Component, forwardRef, Input, OnInit } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { SelectOption } from './select-option.model';
+import { SelectOption } from '../../../model/select-option.model';
 
 @Component({
   selector: 'app-simple-select',

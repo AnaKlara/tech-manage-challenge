@@ -14,23 +14,14 @@ export class HeaderComponent {
     email: 'claracorreadasilva@gmail.com',
   };
 
-  triggerEventToUserFloatCard: Subject<void> = new Subject<void>();
-
-  triggerEventToSuportCard: Subject<void> = new Subject<void>();
-
   constructor(private router: Router) {}
 
-  helpButtonClick() {}
-  notificationButtonClick() {}
-
-  toggleFloatingDiv() {
-    this.triggerEventToUserFloatCard.next();
-  }
   redirectTo(pagename: string): void {
     void this.router.navigateByUrl(pagename);
   }
 
+  helpButtonClick() {}
+  notificationButtonClick() {}
   suportButtonClick() {
-    this.triggerEventToSuportCard.next();
   }
 }

@@ -18,6 +18,8 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
+import {MatSelectModule} from '@angular/material/select';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 @NgModule({
   declarations: [
@@ -35,11 +37,13 @@ import { FormsModule } from '@angular/forms';
     ReactiveFormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatMomentDateModule,
     MatButtonModule,
     MatTableModule,
     MatPaginatorModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    MatSelectModule
   ]
 })
 export class UsuarioModule { }

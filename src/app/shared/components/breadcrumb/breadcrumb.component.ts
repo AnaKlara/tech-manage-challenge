@@ -1,6 +1,6 @@
 import { Component, ContentChild, Input, OnInit, TemplateRef } from '@angular/core';
 
-import { Breadcrumb } from './breadcrumb.model';
+import { Breadcrumb } from '../../model/breadcrumb.model';
 
 @Component({
   selector: 'breadcrumb',
