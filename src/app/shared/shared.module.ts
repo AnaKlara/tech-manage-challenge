@@ -12,6 +12,7 @@ import { SimpleSelectComponent } from './components/form-components/simple-selec
 import { CelularBrPipe } from './pipes/celular-br/celular-br.pipe';
 import { MatPaginatorIntl } from '@angular/material/paginator';
 import { CustomMatPaginatorIntl } from './config/am-paginator-config';
+import { CelularBrMaskDirective } from './directives/celular-br-mask/celular-br-mask.directive';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CustomMatPaginatorIntl } from './config/am-paginator-config';
     DropdownSidenavComponent,
     NotFoundPageComponent,
     SimpleSelectComponent,
-    CelularBrPipe
+    CelularBrPipe,
+    CelularBrMaskDirective
   ],
   imports: [
     CommonModule,
@@ -36,7 +38,8 @@ import { CustomMatPaginatorIntl } from './config/am-paginator-config';
     SidenavComponent,
     NotFoundPageComponent,
     SimpleSelectComponent,
-    CelularBrPipe
+    CelularBrPipe,
+    CelularBrMaskDirective
   ],
   providers: [{ provide: MatPaginatorIntl, useClass: CustomMatPaginatorIntl }],
 })

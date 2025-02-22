@@ -2,7 +2,7 @@
 <section id="cadastro-perfil">
   <div class="header-cadastro">
       <p class="title">Cadastrar perfil</p>
-      <button mat-flat-button color="primary">Salvar</button>
+      <button mat-flat-button color="primary" class="isFormInvalid">Salvar</button>
   </div>
 </section>
 
@@ -11,27 +11,33 @@
     <mat-form-field class="form-field" appearance="fill">
       <mat-label>Nome Completo</mat-label>
       <input matInput formControlName="nomeCompleto" placeholder="Digite seu nome">
+      <mat-error *ngIf="userFC['nomeCompleto'].hasError('required')">Campo obrigatório.</mat-error>
+      <mat-error *ngIf="userFC['nomeCompleto'].hasError('atLeastTwoWords')">Um nome deve ter pelo menos duas palavras</mat-error>
     </mat-form-field>
 
     <mat-form-field class="form-field" appearance="fill">
       <mat-label>Email</mat-label>
       <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
+      <mat-error *ngIf="userFC['email'].hasError('required')">
+        Campo obrigatório. 
+        <!-- <strong>required</strong> -->
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field class="form-field" appearance="fill">
       <mat-label>Celular</mat-label>
-      <input matInput formControlName="celular" maxlength="11" placeholder="Ex. 21 9 68814531">
+      <input matInput formControlName="celular" maxlength="16" placeholder="Ex. 21 9 68814531">
     </mat-form-field>
 
     <mat-form-field appearance="fill">
       <mat-label>Data de Nascimento</mat-label>
-      <input matInput [matDatepicker]="picker" formControlName="dataNascimento" placeholder="dd/MM/AAAA">
+      <input matInput [matDatepicker]="picker" formControlName="dataNascimento" placeholder="dd/MM/AAAA" [min]="minDate" [max]="maxDate">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
 
 
-   <app-simple-select formControlName="tipoUsuario" [options]="roles" placeholder="Select a role"></app-simple-select>
+   <app-simple-select formControlName="tipoUsuario" [options]="roles" [label]="'Tipo de Usuário'"></app-simple-select>
     
 
   </form>
