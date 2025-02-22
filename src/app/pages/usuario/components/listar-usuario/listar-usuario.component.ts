@@ -16,10 +16,10 @@ export class ListarUsuarioComponent implements OnInit {
     { label: 'Listar usuarios', url: '/usuario' },
   ];
 
-  searchTableInput: string;
+  searchTableInput: string = "";
 
   displayedColumns: string[] = ["nomeCompleto","email","celular","dataNascimento","tipoUsuario", "action"];
-  dataSource: MatTableDataSource<User>
+  dataSource!: MatTableDataSource<User>;
 
   users: User[] = [];
   currentPage: number = 1;

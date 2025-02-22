@@ -50,7 +50,7 @@ cd <DIRETORIO_DO_PROJETO>
 3. Instale as dependências do projeto:
 
 ```
-npm install
+npm install --legacy-peer-deps
 ```
 
 #### Executando o Projeto

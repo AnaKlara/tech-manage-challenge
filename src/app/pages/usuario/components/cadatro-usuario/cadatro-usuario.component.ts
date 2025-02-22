@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { SelectOption } from 'src/app/shared/model/select-option.model';
 import { atLeastTwoWordsValidator, brazilianPhoneNumberValidator, dateFormatValidator, matchEmailConfirmValidator, maxAgeValidator, minAgeValidator } from 'src/app/shared/form-validators/form-validators';
-import * as _moment from 'moment';
-import { Moment } from 'moment';
+import moment from 'moment';
 import { UsuariosService } from 'src/app/core/services/usuarios.service';
 import { UserMapper } from 'src/app/core/models/user.mapper';
 import { User } from 'src/app/core/models/user.model';
@@ -15,7 +14,7 @@ import { User } from 'src/app/core/models/user.model';
 })
 export class CadatroUsuarioComponent implements OnInit {
   
-  userRegistrationForm: FormGroup;
+  userRegistrationForm!: FormGroup;
 
   breadcrumbItems = [
     { label: 'Início', url: '/home' },
@@ -25,7 +24,7 @@ export class CadatroUsuarioComponent implements OnInit {
 
   minDate: Date;
   maxDate: Date;
-  startYear : Date = _moment().subtract(18, 'years').startOf('year').toDate();
+  startYear : Date = new Date();// moment().subtract(18, 'years').startOf('year').toDate();
 
   roles: SelectOption[] = [
     { value: 'administrador', label: 'Administrador' },
