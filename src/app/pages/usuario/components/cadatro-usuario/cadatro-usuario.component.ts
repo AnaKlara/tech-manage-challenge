@@ -12,6 +12,7 @@ export class CadatroUsuarioComponent implements OnInit {
 
   breadcrumbItems = [
     { label: 'Início', url: '/home' },
+    { label: 'Listar usuarios', url: '/usuario' },
     { label: 'Cadastro', url: '' },
   ];
 

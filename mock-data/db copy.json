@@ -1,0 +1,84 @@
+{
+    "users": [
+      { 
+        "id": "1", 
+        "nomeCompleto": "Raimundo Nonato", 
+        "email": "raimundo@techma.com",
+        "celular": "21987654321",
+        "dataNascimento":"1989-02-18",
+        "tipoUsuario":"visualizador"
+      },
+      { 
+        "id": "2", 
+        "nomeCompleto": "Policarpo Quaresma", 
+        "email": "policarpo@techma.com",
+        "celular": "21987654321",
+        "dataNascimento":"1995-03-11",
+        "tipoUsuario":"visualizador"
+      },
+      { 
+        "id": "3", 
+        "nomeCompleto": "Macabéa Lispector", 
+        "email": "macabea@techma.com",
+        "celular": "21987654321",
+        "dataNascimento":"1994-08-18",
+        "tipoUsuario":"visualizador"
+      },
+      { 
+        "id": "4", 
+        "nomeCompleto": "Riobaldo Guimarães Rosa", 
+        "email": "rguimaraesr@techma.com",
+        "celular": "21987654321",
+        "dataNascimento":"1990-05-15",
+        "tipoUsuario":"visualizador"
+      },
+      { 
+        "id": "5", 
+        "nomeCompleto": "Jorge Amado", 
+        "email": "jorgeamado@techma.com",
+        "celular": "21987654321",
+        "dataNascimento":"1968-02-22",
+        "tipoUsuario":"visualizador"
+      },
+      { 
+        "id": "6", 
+        "nomeCompleto": "Eça de Queirós", 
+        "email": "queirosmundo@techma.com",
+        "celular": "21987654321",
+        "dataNascimento":"1999-07-07",
+        "tipoUsuario":"administrador"
+      },
+      { 
+        "id": "7", 
+        "nomeCompleto": "Monteiro Lobato", 
+        "email": "mlobato@techma.com",
+        "celular": "21987654321",
+        "dataNascimento":"1985-10-12",
+        "tipoUsuario":"administrador"
+      },
+      { 
+        "id": "8", 
+        "nomeCompleto": "Manuel Antônio de Almeida", 
+        "email": "mantonoia@techma.com",
+        "celular": "21987654321",
+        "dataNascimento":"1971-11-21",
+        "tipoUsuario":"editor"
+      },
+      { 
+        "id": "9", 
+        "nomeCompleto": "Machado de Assis", 
+        "email": "massis@techma.com",
+        "celular": "21987654321",
+        "dataNascimento":"1980-04-15",
+        "tipoUsuario":"administrador"
+      },
+      { 
+        "id": "10", 
+        "nomeCompleto": "Mário de Andrade", 
+        "email": "mandrade@techma.com",
+        "celular": "21987654321",
+        "dataNascimento":"1893-10-09",
+        "tipoUsuario":"editor"
+      }
+    ]
+  }

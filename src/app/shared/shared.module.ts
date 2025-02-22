@@ -9,6 +9,9 @@ import { DropdownSidenavComponent } from './components/sidenav/components/dropdo
 import { RouterModule } from '@angular/router';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 import { SimpleSelectComponent } from './components/form-components/simple-select/simple-select.component';
+import { CelularBrPipe } from './pipes/celular-br/celular-br.pipe';
+import { MatPaginatorIntl } from '@angular/material/paginator';
+import { CustomMatPaginatorIntl } from './config/am-paginator-config';
 
 
 @NgModule({
@@ -19,7 +22,8 @@ import { SimpleSelectComponent } from './components/form-components/simple-selec
     SidenavComponent,
     DropdownSidenavComponent,
     NotFoundPageComponent,
-    SimpleSelectComponent
+    SimpleSelectComponent,
+    CelularBrPipe
   ],
   imports: [
     CommonModule,
@@ -31,7 +35,9 @@ import { SimpleSelectComponent } from './components/form-components/simple-selec
     BreadcrumbComponent,
     SidenavComponent,
     NotFoundPageComponent,
-    SimpleSelectComponent
-  ]
+    SimpleSelectComponent,
+    CelularBrPipe
+  ],
+  providers: [{ provide: MatPaginatorIntl, useClass: CustomMatPaginatorIntl }],
 })
 export class SharedModule { }

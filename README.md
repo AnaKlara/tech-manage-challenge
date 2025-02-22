@@ -57,14 +57,30 @@ npm install
 
 Para executar o projeto, siga as etapas abaixo:
 
-1. Inicie o servidor de desenvolvimento:
+1. Inicie o servidor de dados mockados:
+
+```
+npx json-server --watch mock-data/db.json --port 3000
+```
+
+
+2. Inicie o servidor de desenvolvimento da aplicacao angular:
 
 ```
 ng serve --open
 ```
 
-2. Abra o navegador e acesse a URL:
-   http://localhost:4200
+
+*. Caso exista algum processo na porta 3000(Linux):
+
+```
+sudo kill -9 `sudo lsof -t -i:3000`
+```
+
+Doc do JSON SERVER
+
+https://github.com/typicode/json-server
+
 
 #### Estrutura do Projeto
 
