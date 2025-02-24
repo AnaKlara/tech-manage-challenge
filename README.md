@@ -38,19 +38,19 @@ Esperamos que este projeto seja útil e contribua para o seu desenvolvimento em 
 1. Clone o repositório do projeto em sua máquina local:
 
 ```
-git clone <URL_DO_REPOSITORIO>
+git clone https://github.com/AnaKlara/tech-manage-challenge.git
 ```
 
 2. Acesse o diretório do projeto:
 
 ```
-cd <DIRETORIO_DO_PROJETO>
+cd tech-manage-challenge
 ```
 
 3. Instale as dependências do projeto:
 
 ```
-npm install --legacy-peer-deps
+npm install 
 ```
 
 #### Executando o Projeto
