@@ -87,6 +87,22 @@
       "celular": "21968814531",
       "dataNascimento": "1998-10-12T02:00:00.000Z",
       "tipoUsuario": "editor"
+    },
+    {
+      "id": "e1f3",
+      "nomeCompleto": "Ana Clara Correa",
+      "email": "clara@gmail.com",
+      "celular": "21968814531",
+      "dataNascimento": "1998-11-12T02:00:00.000Z",
+      "tipoUsuario": "editor"
+    },
+    {
+      "id": "f984",
+      "nomeCompleto": "Ana Clara Correa",
+      "email": "clara@gmail.com",
+      "celular": "21968814531",
+      "dataNascimento": "1998-11-12T02:00:00.000Z",
+      "tipoUsuario": "editor"
     }
   ]
 }

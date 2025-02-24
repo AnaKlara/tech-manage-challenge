@@ -218,6 +218,8 @@ export class SeuModulo { }
 
 <h2  style="color:SteelBlue;font-weight: bold">Responsividade</h2>
 
+As páginas "Listar Perfis de usuarios" e "Cadastrar Usuario" são responsivas para aparelhos celular.
+
 O projeto utiliza o Layout Grid do Material Design, que é um sistema de estilos  que ajuda a organizar os elementos de uma interface de forma clara e responsiva. Ele usa uma estrutura baseada em colunas, margens e espaçamentos, garantindo que o design se adapte a diferentes tamanhos de tela.
 
 Esse sistema facilita a criação de layouts flexíveis, pois os elementos podem se ajustar automaticamente conforme o dispositivo (celular, tablet ou desktop). Com o Layout Grid, é possível manter um alinhamento consistente e uma boa experiência de usuário em qualquer resolução.

@@ -1,6 +1,6 @@
 import { Mapper } from "../utils/mapper";
-import { UserForm } from "./user-form.model";
-import { User } from "./user.model";
+import { UserForm } from "../models/user-form.model";
+import { User } from "../models/user.model";
 
 export class UserMapper extends Mapper<UserForm, User> {
     mapFrom(param: UserForm): User {

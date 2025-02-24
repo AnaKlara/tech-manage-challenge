@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/core/models/user.model';
-import { UsuariosService } from 'src/app/core/services/usuarios.service';
+import { UsuariosService } from 'src/app/core/services/usuario/usuarios.service';
 import {MatTableDataSource} from '@angular/material/table';
 import { PageEvent } from '@angular/material/paginator';
 
@@ -27,10 +27,10 @@ export class ListarUsuarioComponent implements OnInit {
   totalUsers = 0;
   
   constructor(private usuariosService: UsuariosService) {
-    this.buscarPaginaUsuarios(this.currentPage, this.pageSize);
   }
 
   ngOnInit(): void {
+    this.buscarPaginaUsuarios(this.currentPage, this.pageSize);
   }
 
   buscarPaginaUsuarios(page: number, size: number): void {

@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { SelectOption } from 'src/app/shared/model/select-option.model';
-import { atLeastTwoWordsValidator, brazilianPhoneNumberValidator, dateFormatValidator, matchEmailConfirmValidator, maxAgeValidator, minAgeValidator } from 'src/app/shared/form-validators/form-validators';
+import { CustomValidators } from 'src/app/shared/form-validators/form-validators';
 import * as _moment from 'moment';
-import { UsuariosService } from 'src/app/core/services/usuarios.service';
-import { UserMapper } from 'src/app/core/models/user.mapper';
+import { UsuariosService } from 'src/app/core/services/usuario/usuarios.service';
+import { UserMapper } from 'src/app/core/mapers/user.mapper';
 import { User } from 'src/app/core/models/user.model';
 
 @Component({
@@ -55,21 +55,18 @@ export class CadatroUsuarioComponent implements OnInit {
     return this.userRegistrationForm.controls['email'].value === null;
   }
 
-  checkMatchEmailsError(): boolean {
-    return this.userRegistrationForm.hasError('matchEmails');
-  }
   generateUserRegistrationForm(){
     this.userRegistrationForm = this.fb.group({
-      nomeCompleto: ['', [Validators.required, atLeastTwoWordsValidator()]],
+      nomeCompleto: ['', [Validators.required, CustomValidators.atLeastTwoWords()]],
       email: ['', [Validators.required, Validators.email]],
-      emailConfirm : [{ value: '', disabled: true }, [Validators.required, Validators.email, matchEmailConfirmValidator('email')]],
-      celular: ['', [Validators.required, brazilianPhoneNumberValidator()]],
+      emailConfirm : [{ value: '', disabled: true }, [Validators.required, Validators.email, CustomValidators.matchEmailConfirm('email')]],
+      celular: ['', [Validators.required, CustomValidators.brazilianPhoneNumber()]],
       dataNascimento: ['', 
         [
           Validators.required,
-          dateFormatValidator(),
-          minAgeValidator(18),
-          maxAgeValidator(100),
+          CustomValidators.dateFormat(),
+          CustomValidators.minAge(18),
+          CustomValidators.maxAge(100),
       ]
       ],
       tipoUsuario: ['', Validators.required]
@@ -105,7 +102,7 @@ export class CadatroUsuarioComponent implements OnInit {
         console.log('um novo valor recebido', value);
       },
       error: (err: any) => {
-        console.error('Algum erro', err);
+        console.log('Algum erro');
       },
       complete: () => {
         console.log('Operacao completa');

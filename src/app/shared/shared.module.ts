@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 import { CelularBrPipe } from './pipes/celular-br/celular-br.pipe';
 import { MatPaginatorIntl } from '@angular/material/paginator';
-import { CustomMatPaginatorIntl } from './config/am-paginator-config';
+import { CustomMatPaginatorIntl } from './config/paginator/am-paginator-config';
 
 @NgModule({
   declarations: [

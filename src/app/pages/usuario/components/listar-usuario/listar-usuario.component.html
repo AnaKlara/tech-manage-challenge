@@ -7,7 +7,7 @@
 
 <section class="table-container">
   <mat-form-field appearance="standard">
-    <mat-icon matPrefix>search</mat-icon>
+    <mat-icon matPrefix style="color: gray; font-size: 1.25rem; margin-left: 1rem; margin-top: 0.5rem;">search</mat-icon>
     <input matInput (keyup)="applyFilter($event)" placeholder="Pesquise na tabela..." [(ngModel)]="searchTableInput">
     <button *ngIf="searchTableInput" matSuffix mat-icon-button aria-label="Clear" (click)="searchTableInput=''">
       <mat-icon>close</mat-icon>
