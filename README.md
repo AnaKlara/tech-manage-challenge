@@ -27,11 +27,8 @@
 
 <h2 style="color:SteelBlue;font-weight: bold">Sobre o Projeto</h2>
 
-Este projeto foi gerado com o Angular CLI versão 17 e Node.js versão 20.11.1. O projeto utiliza a biblioteca Angular Material para a construção das páginas e componentes, garantindo um design consistente e moderno.
+Este projeto foi gerado com o Angular CLI versão 14 e Node.js versão 16.11.1. O projeto utiliza a biblioteca Angular Material para a construção das páginas e componentes, garantindo um design consistente e moderno.
 
-Fique à vontade para explorar o projeto e adaptá-lo às suas necessidades específicas. Ele foi projetado para ser flexível e extensível, facilitando a adição de novos recursos e a personalização de acordo com os requisitos do seu projeto.
-
-Esperamos que este projeto seja útil e contribua para o seu desenvolvimento em Angular. Em caso de dúvidas ou problemas, contate a equipe de arquitetura.
 
 #### Configuração do Ambiente
 
