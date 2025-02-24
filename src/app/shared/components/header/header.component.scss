@@ -3,9 +3,8 @@
 :host {
   position: absolute;
   top: 0;
-  left: 3rem;
-  $Sidenav-width: 3rem;
-  width: calc(100% - $Sidenav-width);
+  left: 0rem;
+  width: 100%;
   height: 3rem;
 
   header {
@@ -36,7 +35,9 @@
         cursor: pointer;
         background-color: transparent;
         padding: 1rem;
-        p {
+        .p-suporte {
+          display: inline-block; 
+          color: white;
           margin-left: 1rem;
           font-size: 16px;
           line-height: 1rem;
@@ -54,6 +55,21 @@
 
       button:hover {
         background-color: $primary-darker;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  :host {
+    header {
+      .div-right {
+        a {
+          .p-suporte {
+            display: none; 
+          }
+        }
       }
     }
   }

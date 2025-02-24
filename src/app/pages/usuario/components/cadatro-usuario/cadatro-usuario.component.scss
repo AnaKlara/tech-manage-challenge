@@ -3,12 +3,10 @@
         background-color: white;
         padding: 1rem 2rem;
         display: flex;
-        justify-content: space-between;
         .title{
             font-size: 2rem;
             line-height: 2.5rem;
             font-weight: 500;
-            // padding-left: 1.25rem;
         }
     }
     .section-form {
@@ -17,14 +15,25 @@
         display: flex;
         background-color: white;
         form {
-            width: 50%;
-            display: flex;
-            background-color: white;
             flex-direction: column;
             .form-field{
-                margin-top: 1rem;
+                margin-bottom: 1.5rem;
                 width: 100%;
             }
         }
     }
 }
+
+@media only screen and (max-width: 600px) {
+    :host {
+        .header-cadastro{
+            background-color: white;
+            padding: .5rem 1.75rem;
+            display: flex;
+            .title{
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+        }
+    }
+  }

@@ -4,8 +4,6 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
-import { DropdownSidenavComponent } from './components/sidenav/components/dropdown-sidenav/dropdown-sidenav.component';
 import { RouterModule } from '@angular/router';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 import { CelularBrPipe } from './pipes/celular-br/celular-br.pipe';
@@ -17,8 +15,6 @@ import { CustomMatPaginatorIntl } from './config/am-paginator-config';
     HeaderComponent,
     FooterComponent,
     BreadcrumbComponent,
-    SidenavComponent,
-    DropdownSidenavComponent,
     NotFoundPageComponent,
     CelularBrPipe,
   ],
@@ -30,7 +26,6 @@ import { CustomMatPaginatorIntl } from './config/am-paginator-config';
     HeaderComponent,
     FooterComponent,
     BreadcrumbComponent,
-    SidenavComponent,
     NotFoundPageComponent,
     CelularBrPipe,
   ],

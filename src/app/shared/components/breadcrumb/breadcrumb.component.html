@@ -5,8 +5,7 @@
         *ngFor="let breadcrumb of breadcrumbs; let last = last"
         class="breadcrumb-item"
         [ngClass]="{ active: last }"
-        aria-current="page"
-      >
+        aria-current="page">
         <a *ngIf="!last" [routerLink]="breadcrumb.url">{{ breadcrumb.label }}</a>
         <span *ngIf="last">{{ breadcrumb.label }}</span>
       </li>

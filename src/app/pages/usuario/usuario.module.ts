@@ -19,6 +19,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
     MatPaginatorModule,
     MatIconModule,
     FormsModule,
-    MatSelectModule
+    MatSelectModule,
+    FlexLayoutModule
   ]
 })
 export class UsuarioModule { }

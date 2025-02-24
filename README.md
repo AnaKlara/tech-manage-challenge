@@ -37,19 +37,19 @@ Esperamos que este projeto seja útil e contribua para o seu desenvolvimento em 
 
 1. Clone o repositório do projeto em sua máquina local:
 
-```
+```bash
 git clone https://github.com/AnaKlara/tech-manage-challenge.git
 ```
 
 2. Acesse o diretório do projeto:
 
-```
+```bash
 cd tech-manage-challenge
 ```
 
 3. Instale as dependências do projeto:
 
-```
+```bash
 npm install 
 ```
 
@@ -59,21 +59,21 @@ Para executar o projeto, siga as etapas abaixo:
 
 1. Inicie o servidor de dados mockados:
 
-```
+```bash
 npx json-server --watch mock-data/db.json --port 3000
 ```
 
 
 2. Inicie o servidor de desenvolvimento da aplicacao angular:
 
-```
+```bash
 ng serve --open
 ```
 
 
 *. Caso exista algum processo na porta 3000(Linux):
 
-```
+```bash
 sudo kill -9 `sudo lsof -t -i:3000`
 ```
 
@@ -88,7 +88,7 @@ O projeto segue uma estrutura de diretórios organizada, inspirada no modelo de 
 
 A estrutura básica é a seguinte:
 
-```
+```bash
 src/
 ├─ app/
 │  ├─ pages/
@@ -128,57 +128,13 @@ Deixamos algumas recomendações de extensões para o editor de código vscode. 
 
 Abra a paleta de comandos:
 
-```
+```bash
 CMD + Shift + p
 ```
 
 Pesquise por 'Show Recommended Extensions'.
 
 Todas as extensões podem ser instaladas juntas ou apenas as extensões que você escolher.
-
-<h3  style="color:BurlyWood;font-weight: bold">Ferramentas DEV: Lint & Prettier</h3>
-
-Prettier e ESLint são duas ferramentas populares usadas em conjunto para manter a qualidade do código em projetos de desenvolvimento. Embora ambos ajudem a melhorar o código, eles têm propósitos distintos:
-
-<h4>Prettier: Formatação de Código</h4>
-
-Prettier é uma ferramenta de formatação de código automática. Ele aplica regras consistentes de estilo de código, como indentação, espaçamento, quebras de linha, etc.
-Benefícios:
-
-- Consistência: Garante que o código seja formatado de maneira consistente em todo o projeto, independentemente de quem está escrevendo o código.
-- Facilidade de Uso: Ao configurar o Prettier, você pode formatar automaticamente o código ao salvar arquivos, eliminando a necessidade de discutir ou decidir sobre o estilo de código.
-
-<h4>ESLint: Análise de Código (Linting)</h4>
-
-ESLint é uma ferramenta de análise de código que ajuda a encontrar e corrigir problemas no código, como erros de sintaxe, práticas de programação incorretas e possíveis bugs. Benefícios:
-
-- Qualidade do Código: Ajuda a identificar e corrigir problemas antes de rodar ou implantar o código.
-  & Conformidade com Boas Práticas: Garante que o código siga boas práticas de desenvolvimento, como evitar o uso de variáveis não utilizadas ou funções assíncronas sem tratamento de erro.
-- Personalização: Permite configurar regras específicas de acordo com os padrões e necessidades do seu projeto.
-
-<h4>Utilização</h4>
-
-Fazer uma varredura no projeto para encontrar erros de formatação:
-
-```
-npm run format
-```
-
-.
-
-Fazer uma varredura no projeto para encontrar problemas de código:
-
-```
-npm run lint
-```
-
-.
-
-Fazer uma varredura no projeto para ajustar automaticamente problemas de código não graves:
-
-```
-npm run lint:fix
-```
 
 <h3  style="color:BurlyWood;font-weight: bold">Estilos & organização</h3 >
 
@@ -190,7 +146,7 @@ Existem três temas de cores a esclher: yellow, green e ocean. O padrão é yell
 
 Para gerar um novo componente, execute o seguinte comando no terminal:
 
-```
+```bash
 ng generate component nome-do-componente
 ```
 
@@ -258,6 +214,19 @@ export class SeuModulo { }
 </mat-menu>
 
 ```
+
+
+<h2  style="color:SteelBlue;font-weight: bold">Responsividade</h2>
+
+O projeto utiliza o Layout Grid do Material Design, que é um sistema de estilos  que ajuda a organizar os elementos de uma interface de forma clara e responsiva. Ele usa uma estrutura baseada em colunas, margens e espaçamentos, garantindo que o design se adapte a diferentes tamanhos de tela.
+
+Esse sistema facilita a criação de layouts flexíveis, pois os elementos podem se ajustar automaticamente conforme o dispositivo (celular, tablet ou desktop). Com o Layout Grid, é possível manter um alinhamento consistente e uma boa experiência de usuário em qualquer resolução.
+
+Ele funciona dividindo a tela em uma grade de colunas, onde os conteúdos são distribuídos e redimensionados conforme necessário. Dessa forma, o design se mantém harmonioso e bem organizado, independentemente do tamanho da tela.
+
+![Alt text](doc/pagina-cadastrar-usuario.png "Title")
+
+
 
 <h2  style="color:SteelBlue;font-weight: bold">Testes com Jest</h2>
 
@@ -345,3 +314,8 @@ https://v17.material.angular.io/
 
 Lista de ícones do Material Design:
 https://fonts.google.com/icons
+
+
+<h2  style="color:SteelBlue;font-weight: bold">Conheça meus outros projetos angular: </h2>
+
+Startup for Angular Projects -> https://github.com/AnaKlara/startup-angular

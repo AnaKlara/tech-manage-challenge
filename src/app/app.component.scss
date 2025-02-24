@@ -2,8 +2,8 @@
 :host {
   .app {
     position: absolute;
-    $sidenav-height: 3rem;
-    top: $sidenav-height;
+    $header-height: 3rem;
+    top: $header-height;
     left: 0rem;
     $footer-and-header-height: 6rem;
     width: 100%;
@@ -13,3 +13,15 @@
     background-color: $neutral-3;
   }
 }
+
+// @media only screen and (max-width: 600px) {
+//   :host {
+//     .app {
+//       $sidenav-height-mobile: 2rem;
+//       top: $sidenav-height-mobile;
+//       $footer-and-header-height-mobile: 4rem; 
+//       height: calc(100% - $footer-and-header-height-mobile);
+//       overflow-y: scroll;
+//     }
+//   }
+// }
