@@ -1,0 +1,47 @@
+<header>
+  <div class="div-left">
+    <h1 (click)="redirectTo('home')">TechManage</h1>
+    <h2>ERP</h2>
+  </div>
+
+  <div class="div-right" style="display: flex">
+    <a (click)="suportButtonClick()">
+      <span>
+        <img
+          height="16"
+          width="16"
+          src="../../../../../assets/icons/headphone.svg"
+          alt="" />
+      </span>
+      <p style="display: inline-block; color: white">Suporte Técnico</p>
+    </a>
+    <button (click)="helpButtonClick()">
+      <span>
+        <img
+          height="16"
+          width="16"
+          src="../../../../../assets/icons/notificacoes.svg"
+          alt="" />
+      </span>
+    </button>
+    <button (click)="notificationButtonClick()">
+      <span>
+        <img
+          height="16"
+          width="16"
+          src="../../../../../assets/icons/informacoes.svg"
+          alt="" />
+      </span>
+    </button>
+    <button>
+      <span>
+        <img
+          height="16"
+          width="16"
+          src="../../../../../assets/icons/user-avatar-filled-alt.svg"
+          alt="" />
+      </span>
+    </button>
+    <img height="48" src="../../../../../assets/img/logo.png" />
+  </div>
+</header>

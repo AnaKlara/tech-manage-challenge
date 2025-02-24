@@ -1,0 +1,78 @@
+<breadcrumb [breadcrumbs]="breadcrumbItems"></breadcrumb>
+<section id="cadastro-perfil">
+  <div class="header-cadastro">
+      <p class="title">Cadastrar perfil</p>
+      <button mat-flat-button color="primary" [disabled]="isFormInvalid" (click)="onSubmit()">Salvar</button>
+  </div>
+</section>
+
+<section class="section-form">
+  <form [formGroup]="userRegistrationForm">
+    <mat-form-field class="form-field" appearance="outline">
+      <mat-label>Nome Completo</mat-label>
+      <input matInput formControlName="nomeCompleto" placeholder="Digite seu nome" (input)="onlyLettersAndAccentFilter($event)" [maxLength]="50">
+      <mat-error *ngIf="userFC['nomeCompleto'].hasError('required')">Campo obrigatório.</mat-error>
+      <mat-error *ngIf="userFC['nomeCompleto'].hasError('atLeastTwoWords')">Insira o nome completo</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-field" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com" [maxLength]="50" (input)="emailInputFilter($event)">
+      <mat-error *ngIf="userFC['email'].hasError('required')">Campo obrigatório.</mat-error>
+      <mat-error *ngIf="userFC['email'].hasError('email')">Email incorreto</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-field" appearance="outline">
+      <mat-label>Confirme o Email</mat-label>
+      <input type="email" matInput formControlName="emailConfirm" placeholder="Ex. pat@example.com" [maxLength]="50" (input)="emailInputFilter($event)">
+      <mat-error *ngIf="userFC['emailConfirm'].hasError('required')">Campo obrigatório.</mat-error>
+      <mat-error *ngIf="userFC['emailConfirm'].hasError('email')">Email incorreto</mat-error>
+      <mat-error *ngIf="userFC['emailConfirm'].hasError('matchEmails')">Emails fornecidos não são iguais</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-field" appearance="outline">
+      <mat-label>Celular</mat-label>
+      <input matInput formControlName="celular" maxlength="11" placeholder="Ex. 21 9 68814531" (input)="onlyNumbersFilter($event)">
+      <mat-error *ngIf="userFC['celular'].hasError('required')">Campo obrigatório.</mat-error>
+      <mat-error *ngIf="userRegistrationForm.get('celular')?.hasError('invalidDDD') && userRegistrationForm.get('celular')?.touched">
+        O DDD informado não é válido.
+      </mat-error>
+      <mat-error *ngIf="userRegistrationForm.get('celular')?.hasError('invalidPhoneNumber') && userRegistrationForm.get('celular')?.touched">
+        O número informado não é válido.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Data de Nascimento</mat-label>
+      <input matInput [matDatepicker]="picker" [matDatepickerFilter]="adultAgeAndMinAge" formControlName="dataNascimento" placeholder="dd/mm/aaaa" [maxlength]="10" (input)="dateInputFilter($event)">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker startView="multi-year" [startAt]="startYear"></mat-datepicker>
+      <mat-error *ngIf="userFC['dataNascimento'].hasError('required')">
+        Campo obrigatório.
+      </mat-error>
+
+      <mat-error *ngIf="userFC['dataNascimento'].hasError('minAgeNotMet')">
+        O usuário deve ter pelo menos 18 anos.
+      </mat-error>
+
+      <mat-error *ngIf="userFC['dataNascimento'].hasError('maxAgeExceeded')">
+        A idade máxima permitida é 100 anos.
+      </mat-error>
+
+      <mat-error *ngIf="userFC['dataNascimento'].hasError('invalidDateFormat') || userFC['dataNascimento'].hasError('invalidDate')">
+        O formato da data deve ser DD/MM/YYYY.
+      </mat-error>
+    </mat-form-field>
+
+   <mat-form-field appearance="outline">
+    <mat-label>Tipo de Usuário</mat-label>
+    <mat-select formControlName="tipoUsuario" name="tipoUsuario">
+      <mat-option *ngFor="let role of roles" [value]="role.value">
+        {{role.label}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="userFC['tipoUsuario'].hasError('required')">Campo obrigatório.</mat-error>
+  </mat-form-field>
+  </form>
+</section>
+
